@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создатель диаграмм Ганта</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Создатель диаграмм Ганта</h1>
+        <div id="chart_div"></div>
+        <div class="controls">
+            <form id="taskForm">
+                <input type="text" id="taskId" placeholder="ID задачи" required readonly>
+                <input type="text" id="taskName" placeholder="Имя задачи" required>
+                <input type="date" id="startDate" required>
+                <input type="date" id="endDate" required>
+                <input type="number" id="percentComplete" placeholder="Процент выполнения" required>
+                <input type="text" id="dependencies" placeholder="Зависимость от задачи">
+                <button type="submit">Добавить/Обновить задачу</button>
+                <button type="button" id="deleteTask">Удалить задачу</button>
+            </form>
+            <button id="saveChart">Сохранить диаграмму</button>
+            <input type="file" id="importChart" accept=".json">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
